@@ -38,6 +38,7 @@ a {
 #logo-container {
     width:550px;
     display: flex;
+    align-items: center;
 }
 
 #home-redir {
@@ -90,6 +91,14 @@ a {
     opacity: 0;
 }
 
+#expand-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    visibility: hidden;
+    width: 0%;
+}
+
 @media screen and (max-width:980px) and (min-width:856px){
     #hero-display {
         width:90%;
@@ -102,16 +111,58 @@ a {
     }
 }
 
-@media screen and (max-width:856px){
+@media screen and (max-width:730px) {
+    #hero-display > h1 {
+        font-size:60px;
+        height:15px;
+    }
+    #hero-display > h2 {
+        font-size:30px;
+        margin-left: 25px;
+    }
+    #hero-btns > a > button {
+        width:120px;
+        height:50px;
+    }
+    #hero-btns > a > button > span{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:856px) and (min-width:458px){
     #hero-display {
         width:90%;
     }
     #logo-container {
-        width:90%;
+        width:50%;
     }
     #top-bar-btns {
         display: none;
         width:0%;
+    }
+    #expand-btn-container {
+        visibility:visible;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:458px) {
+    #hero-display {
+        width:90%;
+    }
+    #logo-container {
+        width:50%;
+    }
+    #main-name {
+        font-size: 30px;
+    }
+    #top-bar-btns {
+        display: none;
+        width:0%;
+    }
+    #expand-btn-container {
+        visibility:visible;
+        width: 40%;
     }
 }
 
@@ -165,6 +216,7 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: .2s all ease-in-out;
 }
 
 #recent-btn:hover {
